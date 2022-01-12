@@ -151,7 +151,7 @@ void ExportPlane(const std::string& out_name, const Vec4d& plane)
 {
 	std::ofstream outFile(out_name);
 
-	outFile << plane[0] << plane[1] << plane[2] << plane[3] << std::endl;
+	outFile << plane.transpose() << std::endl;
 
 	outFile.close();
 }
